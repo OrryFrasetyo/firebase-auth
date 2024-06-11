@@ -54,6 +54,15 @@
             android:textColor="@color/white"
             android:text="Login" />
 
+        <Button
+            android:id="@+id/btn_google"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:backgroundTint="#2196F3"
+            android:text="Masuk dengan Google" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

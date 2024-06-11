@@ -5,6 +5,14 @@ plugins {
 }
 
 android {
+    signingConfigs {
+        getByName("debug") {
+            storeFile = file("D:\\keystore\\keystore_firebase_auth\\keystore.jks")
+            storePassword = "orrymic22"
+            keyAlias = "keymyapp"
+            keyPassword = "orrymic22"
+        }
+    }
     namespace = "com.orryfrasetyo.firebaseauth"
     compileSdk = 34
 
@@ -16,6 +24,7 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig = signingConfigs.getByName("debug")
     }
 
     buildTypes {
@@ -51,4 +60,6 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:33.1.0"))
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-auth-ktx:23.0.0")
+
+    implementation("com.google.android.gms:play-services-auth:21.2.0")
 }
